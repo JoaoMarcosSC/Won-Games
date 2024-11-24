@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platforms",
+  "info": {
+    "singularName": "platform",
+    "pluralName": "platforms",
+    "displayName": "platform"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}
