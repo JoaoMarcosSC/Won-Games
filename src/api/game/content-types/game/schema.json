@@ -77,16 +77,16 @@
       "target": "api::platform.platform",
       "inversedBy": "games"
     },
-    "publisher": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::publisher.publisher",
-      "inversedBy": "games"
-    },
     "developers": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::developer.developer",
+      "inversedBy": "games"
+    },
+    "publisher": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::publisher.publisher",
       "inversedBy": "games"
     }
   }
