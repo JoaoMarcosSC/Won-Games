@@ -1,4 +1,4 @@
-/**
+/**https://docs.strapi.io/dev-docs/backend-customization/controllers
  * game controller
  * 
  * Este arquivo define um controlador personalizado para a API "game" no Strapi.
@@ -16,6 +16,8 @@ export default factories.createCoreController(
     async populate(ctx) {
       // Exibe uma mensagem no console do servidor quando esta ação é executada.
       console.log("RODANDO NO SERVIDOR");
+
+      await strapi.service('api::game.game').populate(ctx.query);
 
       // Envia uma resposta para o cliente indicando que a ação foi concluída.
       ctx.send("FINALIZADO NO CLIENT");

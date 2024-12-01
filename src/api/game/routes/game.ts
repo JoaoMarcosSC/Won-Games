@@ -1,4 +1,4 @@
-/**
+/**https://docs.strapi.io/dev-docs/backend-customization/models
  * game router
  */
 
