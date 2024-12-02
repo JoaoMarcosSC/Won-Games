@@ -15,12 +15,16 @@ export default factories.createCoreController(
     // Define uma ação customizada chamada "populate".
     async populate(ctx) {
       // Exibe uma mensagem no console do servidor quando esta ação é executada.
-      console.log("RODANDO NO SERVIDOR");
+      const options = {
+        limit: 48,
+        order: "desc:trending",
+        ...ctx.query,
+      };
 
-      await strapi.service('api::game.game').populate(ctx.query);
+      await strapi.service("api::game.game").populate(options);
 
       // Envia uma resposta para o cliente indicando que a ação foi concluída.
-      ctx.send("FINALIZADO NO CLIENT");
+      ctx.send("Finished populating games!");
     },
   })
 );
